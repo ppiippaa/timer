@@ -1,0 +1,107 @@
+/* GLOBAL STYLES */
+:root {
+    --main-color: rgba(97, 0, 167, 1);
+    --complement: rgba(204, 185, 232, 1);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+button:hover {
+    background-color: var(--complement);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* NAV BAR STYLES */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 10vh;
+}
+
+.logo {
+    margin: 10px;
+
+}
+
+.reset-button {
+    margin: 10px;
+}
+
+
+/* MAIN CLOCK SECTION */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+
+/* CLOCK FACE SECTION */
+.clock-container {
+    height: 300px;
+    width: 300px;
+}
+
+.clock-face {
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.second-hand {
+    height: 50%;
+    width: 3px;
+    background-color: orangered;
+}
+
+.tick-animation {
+    animation: tick 60s infinite linear;
+    transform-origin: bottom;
+}
+
+
+/* CLOCK BUTTONS SECTION */
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button {
+    border: 2px solid var(--main-color);
+    padding: 5px 10px;
+}
+
+/* KEYFRAMES */
+
+
+@keyframes tick {
+    to {
+        transform: rotate(360deg);
+    }
+}
